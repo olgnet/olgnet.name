@@ -1,11 +1,26 @@
-title: Oleg Smirnov
+title: Smirnov Oleg
 description: >-
-  Thoughts about development and design
+  Thoughts and notes about software development
 baseurl: ""
 url: "https://olgnet.name"
-github_username:  olgnet
 
-theme: minima
+defaults:
+  # Blog posts (collection)
+  - scope:
+      path: "_posts"
+    values:
+      permalink: blog/:title/
+      layout: post
+  # Blog drafts
+  - scope:
+      path: "_drafts"
+    values:
+      permalink: drafts/:title/
+      layout: post
+
+plugins:
+  - jekyll-feed
+  - jekyll-seo-tag
 
 exclude:
   - .sass-cache/
